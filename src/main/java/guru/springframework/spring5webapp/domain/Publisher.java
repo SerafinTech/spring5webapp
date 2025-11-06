@@ -26,7 +26,13 @@ public class Publisher {
 
     public Publisher() {}
 
-    public Publisher(String name, String address1, String city, String state, String zip) {}
+    public Publisher(String name, String address1, String city, String state, String zip) {
+        this.name = name;
+        this.address1 = address1;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+    }
 
     public Set<Book> getBooks() {
         return books;
@@ -95,5 +101,16 @@ public class Publisher {
     @Override
     public int hashCode() {
         return Objects.hashCode(id);
+    }
+
+    @Override
+    public String toString() {
+        return "Publisher{" +
+                "name='" + name + '\'' +
+                ", address1='" + address1 + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                '}';
     }
 }
